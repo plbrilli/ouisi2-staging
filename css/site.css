@@ -114,10 +114,6 @@ body.menu-open{overflow:hidden}
 .hdr[data-transparent] ~ main > .hero:first-child .in{padding-top:calc(var(--hdr-h) + 32px)}
 .hero h1{color:#fff;max-width:900px;font-size:min(var(--h1),11vw)}   /* fits the narrowest phones (320px) without breaking a joined pair */
 .hero .cta{display:flex;flex-direction:column;gap:12px;align-items:center;padding-top:8px}
-/* the slide bars under the buttons, as drawn on both boards */
-.hero .dots{display:flex;gap:12px;padding-top:12px}
-.hero .dots span{width:60px;height:3px;background:#fff}
-.hero .dots span+span{background:rgba(255,255,255,.5)}
 
 /* sets */
 .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%;padding-top:8px}
@@ -216,8 +212,6 @@ body.menu-open{overflow:hidden}
   .hero .ph2{display:block;inset:0 0 0 50%}
   .hero .in{gap:28px}
   .hero .cta{gap:24px}
-  .hero .dots{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);gap:16px;padding:0}
-  .hero .dots span{width:70px}
   .tiles{gap:40px;width:1000px;max-width:100%;padding-top:16px}
   .tile{gap:14px}
   .tile .line{font-size:16px;line-height:1.5;margin-top:-6px}
