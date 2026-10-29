@@ -240,10 +240,13 @@ body.menu-open{overflow:hidden}
 /* ---------- the app pages: iPhone screenshots (Paul, 2026-10-26) ----------
    A screenshot at the iPhone's own shape, corners matched to the screen's. Until Paul's screenshots
    arrive, a placeholder of the same shape stands in, labelled with the screen and the file it wants. */
-.shot{margin:0;width:100%;aspect-ratio:1179/2556;border-radius:14% / 6.46%;overflow:hidden;background:#fff;box-shadow:0 2px 6px rgba(40,40,40,.08),0 18px 40px rgba(40,40,40,.14)}
-.shot img{width:100%;height:100%;object-fit:cover}
-.shot.art{border-radius:10px}
-.shot.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:0 12%;background:#ECE8DC;border:1px solid var(--line);box-shadow:none;color:var(--ink-2);text-align:center}
+/* each screenshot in an iPhone frame (Paul, 10-29), drawn in CSS: a 3.2% bezel around a 1179×2556 screen, and the
+   Dynamic Island over the status bar. The outer ratio is the screen's plus the bezel: 1179 / 2468. */
+.shot{position:relative;margin:0;width:100%;aspect-ratio:1179/2468;padding:3.2%;border-radius:16% / 7.6%;overflow:hidden;background:#1d1d1f;box-shadow:inset 0 0 0 1px #3a3a3c,0 2px 6px rgba(40,40,40,.08),0 18px 40px rgba(40,40,40,.14)}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;border-radius:13.5% / 6.2%}
+.shot:not(.ph):not(.art)::after{content:"";position:absolute;top:2.6%;left:36.5%;width:27%;height:3.7%;border-radius:99px;background:#000}
+.shot.art{aspect-ratio:auto;padding:0;background:#fff;border-radius:10px}
+.shot.ph{padding:0 12%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:0 12%;background:#ECE8DC;border:1px solid var(--line);box-shadow:none;color:var(--ink-2);text-align:center}
 .shot.ph .eb{font-size:11px;letter-spacing:1px}
 .shot-name{font-family:var(--display);font-weight:700;font-size:15px;line-height:1.25;color:var(--ink)}
 .shot-file{font-size:11px;line-height:1.3;overflow-wrap:anywhere}
