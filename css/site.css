@@ -79,7 +79,6 @@ input::placeholder{color:var(--placeholder)}
 .fig{width:320px;max-width:100%}
 
 /* the card, as drawn — measured from the print files 2026-10-22 (OUISI-KIT) */
-.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%}
 .card{aspect-ratio:1/1;max-width:100%;background:#fff;border-radius:9%;padding:4.9%;box-shadow:0 1px 3px rgba(40,40,40,.10)}
 .card img{width:100%;height:100%;object-fit:cover;border-radius:4.2%;display:block}
 
@@ -211,7 +210,6 @@ body.menu-open{overflow:hidden}
   .col{gap:24px}
   .fig{width:100%}
   .cols .swap{order:-1}            /* text first where the desktop board has it on the left */
-  .pair{gap:20px}
   .bar{min-height:61px;font-size:18px}
   .hero{min-height:min(52.8vw,760px)}
   .hero .ph{inset:0 50% 0 0;width:50%}
@@ -257,14 +255,16 @@ body.menu-open{overflow:hidden}
 .shot-file{font-size:11px;line-height:1.3;overflow-wrap:anywhere}
 .lk.mail{text-transform:none;letter-spacing:0;font-size:inherit}
 
-/* the front door's apps: a pair of cards above each app, as on the boards (stacked on a phone, side by side from 1000px).
-   From 1000px the pair gives way to three iPhone screenshots per app (Paul, 2026-10-28). */
+/* the front door's apps: three iPhone screenshots above each app, at every width (Paul, 2026-10-28 desktop, 10-29 phones). */
 .app-pairs{padding-top:12px}
 .app-pairs .h5+p{margin-top:-8px}
-.trio{display:none}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%}
+/* phone spacing measured off the phone board: ~30px from the pictures to the app's name, ~52px from Learn more to the next app */
+.cols.app-pairs{row-gap:48px}             /* row only: desktop keeps its 80px between the two apps */
+.app-pairs .trio{margin-bottom:8px}
 @media (min-width:1000px){
-  .app-pairs .pair{display:none}
-  .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;width:100%}
+  .trio{gap:20px}
+  .app-pairs .trio{margin-bottom:0}
 }
 
 /* /apps, phone first (Paul, 2026-10-27: "mobile forward … scroll on mobile, spread out on desktop").
