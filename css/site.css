@@ -252,16 +252,16 @@ body.menu-open{overflow:hidden}
 .shot-file{font-size:11px;line-height:1.3;overflow-wrap:anywhere}
 .lk.mail{text-transform:none;letter-spacing:0;font-size:inherit}
 
-/* the front door's apps: three iPhone screenshots above each app, at every width (Paul, 2026-10-28 desktop, 10-29 phones). */
+/* the front door's apps: two iPhone screenshots above each app, at every width (Paul: three 10-28/29, two 10-30). */
 .app-pairs{padding-top:12px}
 .app-pairs .h5+p{margin-top:-8px}
-.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%}
 /* phone spacing measured off the phone board: ~30px from the pictures to the app's name, ~52px from Learn more to the next app */
 .cols.app-pairs{row-gap:48px}             /* row only: desktop keeps its 80px between the two apps */
-.app-pairs .trio{margin-bottom:8px}
+.app-pairs .duo{margin-bottom:8px}
 @media (min-width:1000px){
-  .trio{gap:20px}
-  .app-pairs .trio{margin-bottom:0}
+  .duo{gap:20px}
+  .app-pairs .duo{margin-bottom:0}
 }
 
 /* /apps, phone first (Paul, 2026-10-27: "mobile forward … scroll on mobile, spread out on desktop").
