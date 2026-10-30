@@ -147,8 +147,8 @@ body:has(.bar){--peek:240px}           /* the announcement bar (~60px) sits abov
 
 /* close */
 .close{padding-top:56px;padding-bottom:56px}
-.close .cta{display:flex;flex-direction:column;gap:12px;align-items:center}   /* the front door's: the hero's two buttons again (Paul, 10-30) */
-@media (min-width:741px){.close .cta{flex-direction:row;gap:16px}}
+.close .cta,.col .cta{display:flex;flex-direction:column;gap:12px;align-items:center}   /* the front door's: the hero's two buttons again, at the end and under This looks like that (Paul, 10-30) */
+@media (min-width:741px){.close .cta,.col .cta{flex-direction:row;gap:16px}}
 
 /* footer */
 .ftr{background:var(--footer);color:#fff;padding:48px var(--gutter) 40px;text-align:left;display:flex;flex-direction:column;gap:32px}
