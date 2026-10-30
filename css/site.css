@@ -77,6 +77,13 @@ input::placeholder{color:var(--placeholder)}
 .cols{display:flex;flex-direction:column;align-items:center;gap:20px;width:100%}
 .col{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;width:100%;min-width:0}
 .fig{width:320px;max-width:100%}
+/* phones: text sits 48px from the edge, as on the shop (its rich-text blocks add 24px inside the 24px gutter);
+   pictures, set tiles, screenshots, cards and buttons stay at 24px (Paul, 10-30: "Match the shop") */
+@media (max-width:740px){
+  .sec>p,.col>p{padding-left:24px;padding-right:24px;width:100%}
+  /* headings: the same 24px from 368px up, less on the narrowest phones so a joined pair like "from anywhere." still fits */
+  .sec>h1,.sec>h2,.sec>h3,.col>h1,.col>h2,.col>h3{padding-left:clamp(0px,calc((100vw - 320px) / 2),24px);padding-right:clamp(0px,calc((100vw - 320px) / 2),24px);width:100%}
+}
 
 /* the card, as drawn — measured from the print files 2026-10-22 (OUISI-KIT) */
 .card{aspect-ratio:1/1;max-width:100%;background:#fff;border-radius:9%;padding:4.9%;box-shadow:0 1px 3px rgba(40,40,40,.10)}
